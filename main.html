@@ -1,0 +1,102 @@
+<!-- Author: Walter Schlosser -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="main.js"></script>
+    <!-- google fonts -->
+    <link href='https://fonts.googleapis.com/css?family=PT+Serif:700,400italic|Titillium+Web'
+        rel='styleshee' type='text/css' />
+    <link rel="stylesheet" type="text/css" href="main.css" />
+  </head>
+
+  <body>
+
+    <!-- page header with buttons to github, resume, contact -->
+    <div class="header">
+
+      <div class="header-box">
+        <img class="header-button" id="github" title="GitHub" src="images/github_icon.png" />
+        <h3 id="github-text" style="display: none;">GitHub</h3>
+      </div>
+
+      <div class="header-box">
+        <img class="header-button" id="resume" title="Resume" src="images/resume_icon.png" />
+        <h3 id="resume-text" style="display: none;">Resume</h3>
+      </div>
+
+      <div class="header-box">
+        <img class="header-button" id="contact" title="Contact" src="images/mail_icon.png" />
+        <h3 id="contact-text" style="display: none;">Contact</h3>
+      </div>
+
+    </div>
+
+    <!-- main content area -->
+    <div class="content">
+
+      <!-- display name and tag line -->
+      <div class="name-box">
+        <h1 id="name"><b>Walter Schlosser</b></h1>
+        <p id="tagline"><i>your next developer</i></p>
+      </div>
+
+      <!-- display various skills/descriptions that slide in and out -->
+      <div class="sliders">
+
+        <!-- define slides -->
+        <div class="slide" id="1">
+          <p>Colorado School of Mines graduate</p>
+          <p>BS Computer Science</p>
+          <p>BS Engineering Physics</p>
+          <p>3.95 GPA</p>
+        </div> 
+
+        <div class="slide" id="2">
+          <p>Languages including:</p>
+          <p>Java</p>
+          <p>C++</p>
+          <p>Ruby</p>
+          <p>SQL</p>
+          <p>HTML/CSS</p>
+          <p>JavaScript</p>
+        </div>
+
+        <div class="slide" id="3">
+          <p>Familiarities with:</p>
+          <p>Git/GitHub</p>
+          <p>OpenGL</p>
+          <p>Unix Shell</p>
+          <p>jQuery</p>
+          <p>Ruby on Rails</p>
+          <p>PHP</p>
+        </div>
+
+        <div class="slide" id="4">
+          <p>Passionate about developing quality software and web applications</p>
+          <p>Check out my <a href="schlosser_resume.pdf" target="_blank">resume</a> or my 
+            <a href="https://www.github.com/wschloss" target="_blank">GitHub</a> for code
+            samples</p>
+        </div>
+        
+        <!-- define the slider buttons -->
+        <div class="slide-buttons">
+          <ul>
+            <li class="active" id="1">&bull;</li>
+            <li id="2">&bull;</li>
+            <li id="3">&bull;</li>
+            <li id="4">&bull;</li>
+          </ul>
+      </div>
+
+    </div>
+
+    <br style="clear: both;" />
+
+    <!-- footer -->
+    <p id='footer'>&copy; 2015 Walter Schlosser</p>
+
+  </body>
+</html>
