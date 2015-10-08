@@ -89,6 +89,27 @@
             <li id="3">&bull;</li>
             <li id="4">&bull;</li>
           </ul>
+        </div>
+
+      </div>
+
+      <!-- The form to send an email -->
+      <div class="contact-form-container" style="display: none;">
+        <!-- any response message -->
+        <p id="form-response" style="display: none;"> </p>
+        <!-- Handle this form submit with jQuery ajax -->
+        <form action="" >
+          <label for="name-value">Your name: </label><br>
+          <input name="name-value" type="text" /><br>
+
+          <label for="email-value">Your email: </label><br>
+          <input name="email-value" type="text" /><br>
+
+          <label for="message-value">Your message: </label><br>
+          <textarea name="message-value" cols="50" rows="30"></textarea><br> 
+          
+          <input id="contact-form-submit" value="Send" type="submit" />
+        </form>
       </div>
 
     </div>

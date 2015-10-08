@@ -181,3 +181,14 @@ h3#resume-text {
 #footer {
   margin-top: 20px;
 }
+
+/* form properties */
+.contact-form-container {
+  position: relative;
+  display: block;
+  padding: 0px;
+  height: 80%;
+  width: 38%;
+  float: right;
+  padding-left: 27%;
+}

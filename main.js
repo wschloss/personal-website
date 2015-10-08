@@ -56,6 +56,18 @@ $(document).ready( function() {
 
 
   /*
+   * Add click selection functionality to the slide buttons
+   */
+  $(".slide-buttons li").click( function() {
+    // Get the id of this button
+    var id = $(this).attr("id");
+    // shift to that slide, stop the auto shift
+    slideshift(id);
+    clearInterval(shiftIntervalID);
+  });
+
+
+  /*
    * Add click response to the header buttons
    */
   $(".header-button#github").click( function() {
@@ -73,8 +85,11 @@ $(document).ready( function() {
    * Contact button swaps out slides for the form
    */
   $(".header-button#contact").click( function() {
-    //swap sliders for the contact form
-    //TODO
+    // Fade out the slides
+    $(".sliders").fadeOut(200, function() {
+      // After faded out, fade in the form
+      $(".contact-form-container").fadeIn(200);
+    });
   });
 
 
@@ -92,14 +107,23 @@ $(document).ready( function() {
 
 
   /*
-   * Add click selection functionality to the slide buttons
+   * Add emailing functionality to form submit with ajax call
+   * (Thank you to stack overflow for this)
    */
-  $(".slide-buttons li").click( function() {
-    // Get the id of this button
-    var id = $(this).attr("id");
-    // shift to that slide, stop the auto shift
-    slideshift(id);
-    clearInterval(shiftIntervalID);
+  $("#contact-form-submit").click( function(event) {
+    // don't do a normal submit
+    event.preventDefault();
+    // Get form data
+    var data = 
+      {
+        name: $("input[name=name-value]").val(),
+        email: $("input[name=email-value]").val(),
+        message: $("textarea[name=message-value]").val()
+      };
+    // Alert for testing purposes
+    alert(data.name + " " + data.email + " " + data.message);
+    // Append response to the form
+    $("#form-response").html("Your message was sent successfully").fadeIn(200);
   });
 
 });
