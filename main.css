@@ -179,7 +179,9 @@ h3#resume-text {
 
 /* stick footer to bottom */
 #footer {
-  margin-top: 20px;
+  position: relative;
+  bottom: 0px;
+  /*margin-top: 20px;*/
 }
 
 /* form properties */
