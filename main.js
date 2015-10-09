@@ -120,10 +120,18 @@ $(document).ready( function() {
         email: $("input[name=email-value]").val(),
         message: $("textarea[name=message-value]").val()
       };
-    // Alert for testing purposes
-    alert(data.name + " " + data.email + " " + data.message);
-    // Append response to the form
-    $("#form-response").html("Your message was sent successfully").fadeIn(200);
+
+    // Send an ajax request to the mail script
+    $.ajax({
+      type: "POST",
+      url: "send_email.php",
+      data: data,
+      // Append appropriate response to the form
+      success: function() {
+        $("#form-response").html("Your message was sent successfully").fadeIn(200);
+      }
+    });
+
   });
 
 });
