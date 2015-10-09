@@ -192,3 +192,7 @@ h3#resume-text {
   float: right;
   padding-left: 27%;
 }
+
+.contact-form-container input, .contact-form-container textarea {
+  border: 1px solid black;
+}
