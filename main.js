@@ -113,6 +113,10 @@ $(document).ready( function() {
   $("#contact-form-submit").click( function(event) {
     // don't do a normal submit
     event.preventDefault();
+
+    // hide the submit button to stop multiple presses
+    $(this).replaceWith("<p>Sending...</p>");
+
     // Get form data
     var data = 
       {
@@ -128,7 +132,9 @@ $(document).ready( function() {
       data: data,
       // Append appropriate response to the form
       success: function() {
-        $("#form-response").html("Your message was sent successfully").fadeIn(200);
+        // replace the form with a success message
+	$(".contact-form-container form").replaceWith($("#response-success"));
+	$("#response-success").fadeIn(200);
       }
     });
 
