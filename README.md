@@ -9,4 +9,4 @@ Built with HTML, CSS, JavaScript/jQuery, and PHP.
 
 Check it out at:
 
-[walterschlosser.me](http://www.walterschlosser.me)
+[walterschlosser.me](http://walterschlosser.me)
