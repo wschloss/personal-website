@@ -10,6 +10,6 @@ if ($_POST) {
   $message = $name . ":\n" . $message;
 
   // And send it to meh
-  mail("wcschlosser@comcast.net", "A message from: " . $email, $message);
+  mail("wcschlosser@gmail.com", "A message from: " . $email, $message, $headers);
 }
 ?>
